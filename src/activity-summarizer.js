@@ -189,7 +189,7 @@ function generateHumanReadableSummary(data) {
     profile,
     notablePatterns,
     achievements,
-    activityHighlights,
+    activityHighlights: _activityHighlights,
     primaryLanguage,
     recentProjects,
     contributionStats,

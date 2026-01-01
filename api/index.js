@@ -105,16 +105,16 @@ export default async function handler(req, res) {
     // Generate appropriate card type
     let svg;
     switch (type) {
-      case 'compact':
-        svg = generateCompactCard(summaryData, options);
-        break;
-      case 'languages':
-        svg = generateLanguagesCard(summaryData, options);
-        break;
-      case 'activity':
-      default:
-        svg = generateActivityCard(summaryData, options);
-        break;
+    case 'compact':
+      svg = generateCompactCard(summaryData, options);
+      break;
+    case 'languages':
+      svg = generateLanguagesCard(summaryData, options);
+      break;
+    case 'activity':
+    default:
+      svg = generateActivityCard(summaryData, options);
+      break;
     }
 
     // Set cache headers

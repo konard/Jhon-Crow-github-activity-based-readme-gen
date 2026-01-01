@@ -98,14 +98,14 @@ async function handleRequest(req, res) {
 
       let svg;
       switch (type) {
-        case 'compact':
-          svg = generateCompactCard(summaryData, options);
-          break;
-        case 'languages':
-          svg = generateLanguagesCard(summaryData, options);
-          break;
-        default:
-          svg = generateActivityCard(summaryData, options);
+      case 'compact':
+        svg = generateCompactCard(summaryData, options);
+        break;
+      case 'languages':
+        svg = generateLanguagesCard(summaryData, options);
+        break;
+      default:
+        svg = generateActivityCard(summaryData, options);
       }
 
       res.writeHead(200, {

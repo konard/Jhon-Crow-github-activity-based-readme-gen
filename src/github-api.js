@@ -95,8 +95,6 @@ export async function fetchRepoCommitActivity(owner, repo, token = null) {
  * @returns {Promise<Object>} Aggregated contribution stats
  */
 export async function fetchContributionStats(username, token = null) {
-  const client = createGitHubClient(token);
-
   // Get user's repositories
   const repos = await fetchUserRepos(username, token);
 

@@ -58,7 +58,7 @@ export function generateActivityCard(summaryData, options = {}) {
     width = 495,
     showBorder = true,
     borderRadius = 4.5,
-    locale = 'en',
+    locale: _locale = 'en',
     hideStats = false,
     hideProjects = false,
   } = options;
@@ -69,7 +69,7 @@ export function generateActivityCard(summaryData, options = {}) {
     border,
     title: titleColor,
     text: textColor,
-    icon: iconColor,
+    icon: _iconColor,
     accent,
   } = themeConfig;
 
@@ -79,7 +79,7 @@ export function generateActivityCard(summaryData, options = {}) {
     stats,
     recentProjects,
     primaryLanguage,
-    languages,
+    languages: _languages,
     achievements,
   } = summaryData;
 
@@ -328,7 +328,7 @@ export function generateLanguagesCard(summaryData, options = {}) {
     text: textColor,
   } = themeConfig;
 
-  const { displayName, languages } = summaryData;
+  const { displayName: _displayName, languages } = summaryData;
 
   // Language colors (subset of common languages)
   const languageColors = {
@@ -387,7 +387,7 @@ export function generateLanguagesCard(summaryData, options = {}) {
   const barWidth = width - 30;
   const barHeight = 8;
 
-  svg += `<g transform="translate(0, 40)">`;
+  svg += '<g transform="translate(0, 40)">';
 
   for (const lang of languageData) {
     const segmentWidth = (parseFloat(lang.percentage) / 100) * barWidth;
@@ -398,7 +398,7 @@ export function generateLanguagesCard(summaryData, options = {}) {
       barX += segmentWidth;
     }
   }
-  svg += `</g>`;
+  svg += '</g>';
 
   // Language labels
   let labelY = 60;
